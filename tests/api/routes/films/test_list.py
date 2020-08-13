@@ -22,7 +22,7 @@ class TestFilmsList(TestCase):
         # Tests
         response = self.app_client.get("/api/films")
         data = response.get_json()
-        print("DATA =", data)
+
         # Assertions
         films_mock.list_films.assert_called_once()
         films_mock.list_films_with_people.assert_not_called()
