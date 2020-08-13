@@ -1,7 +1,12 @@
+"""Handle Ghibli API films resource."""
+from typing import List, Mapping, Union
+
 import requests
+
 from ghibli.config.config import Configuration
 from ghibli.services.ghibli.people import list_people
-from typing import List
+
+Params = Mapping[str, Union[str, int]]
 
 
 def list_films() -> List:
@@ -10,7 +15,7 @@ def list_films() -> List:
     # Hardcode limit to its max size since we want this endpoint
     # to retrieve all films and it does not seem that films
     # endpoint allow results to be paginated
-    params = {"limit": 250, "fields": "id,title"}
+    params: Params = {"limit": 250, "fields": "id,title"}
     return requests.get(f"{Configuration.get_api_url()}/films", params=params).json()
 
 

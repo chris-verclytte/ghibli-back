@@ -1,8 +1,8 @@
+from http import HTTPStatus
 from unittest import TestCase
 from unittest.mock import patch
 
 from ghibli.api.flask_app import create_app
-from http import HTTPStatus
 
 
 class TestFilmsList(TestCase):
