@@ -3,6 +3,9 @@
 import os
 
 
+# Disable this linting rules because other configuration
+# methods could go there in the future
+# pylint: disable=too-few-public-methods
 class Configuration:
     """Ghibli configuration"""
 

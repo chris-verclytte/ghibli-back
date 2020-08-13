@@ -1,4 +1,6 @@
+"""Handle Ghibli API people resource."""
 import requests
+
 from ghibli.config.config import Configuration
 
 

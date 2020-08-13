@@ -1,5 +1,7 @@
-import ghibli.services.ghibli.films as films
+"""Films list routes."""
 from http import HTTPStatus
+
+import ghibli.services.ghibli.films as films
 
 
 def list_films(*, with_people=False):
